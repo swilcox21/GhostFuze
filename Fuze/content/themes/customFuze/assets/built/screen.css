@@ -989,7 +989,19 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner:after {
   position:absolute; 
   z-index:0
 }
-@media (max-width: 1300px) {
+@media (max-width: 1700px) {
+  .red-bubble {
+    height:500px;
+    width:800px;
+}
+}
+@media (max-width: 1500px) {
+  .red-bubble {
+    height:500px;
+    width:800px;
+}
+}
+@media (max-width: 1440px) {
   .red-bubble {
     height:500px;
     width:750px;
@@ -997,7 +1009,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner:after {
 }
 @media (max-width: 1100px) {
   .red-bubble {
-    height:400px;
+    height:475px;
     width:550px;
 }
 }
