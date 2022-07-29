@@ -1014,7 +1014,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner:after {
 }
 }
 .projects-container {
-  margin: 0px;
+  margin: 50px;
 }
 @media (max-width: 991px) {
   .projects-container {
@@ -1024,6 +1024,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner:after {
 @media (max-width: 767px) {
   .projects-container {
     margin: 10px;
+    margin-bottom: 50px;
   }
 }
 .project-feed {
@@ -1239,7 +1240,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner:after {
   }
 }
 .blog-card-small-inner {
-  background-color: white;
+  background-color: rgb(245, 245, 245);
   border-radius: 10px;
   text-align: center;
   margin: auto;
