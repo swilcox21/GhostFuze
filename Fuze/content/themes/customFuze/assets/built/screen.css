@@ -942,6 +942,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner:after {
   gap: 4.8vmin 4vmin;
   margin-left: 40vmin;
   margin-right: 40vmin;
+  margin-top: 60px;
   grid-template-columns: repeat(5, 1fr);
   /* padding: max(4.8vmin, 36px) 0 0; */
 }
@@ -955,7 +956,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner:after {
 :is(.tag-template, .author-template) .featured-project-feed {
   margin-top: 4vmin;
 }
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .member-feed {
   gap: 3vmin 2vmin;
   grid-template-columns: repeat(5, 1fr);
@@ -978,8 +979,42 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner:after {
   margin-top:-20px;
   }
 }
+.red-bubble {
+  height:600px; 
+  width:950px; 
+  margin-left:-80px; 
+  border-radius:0 250px 50% 60%; 
+  background: rgb(253,141,84); 
+  background: linear-gradient(90deg, rgb(250, 150, 100) 0%, rgba(246,73,76,1) 100%); 
+  position:absolute; 
+  z-index:0
+}
+@media (max-width: 1300px) {
+  .red-bubble {
+    height:500px;
+    width:750px;
+}
+}
+@media (max-width: 1100px) {
+  .red-bubble {
+    height:400px;
+    width:550px;
+}
+}
+@media (max-width: 900px) {
+  .red-bubble {
+    height:400px;
+    width:550px;
+}
+}
+@media (max-width: 600px) {
+  .red-bubble {
+    height:400px;
+    width:370px;
+}
+}
 .projects-container {
-  margin: 50px;
+  margin: 0px;
 }
 @media (max-width: 991px) {
   .projects-container {
@@ -1018,13 +1053,28 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner:after {
   justify-content: space-between; 
   align-items: center; 
   margin: auto; 
+  z-index:2;
 }
 @media (max-width: 767px) {
   .blog-header {
+    z-index:2;
     text-align: center;
-    display:contents;
+    margin-right: 30px;
+    margin-left: 40px;
+    /* display:contents; */
   }
 }
+.blog-card-h1 {
+  text-align:center; 
+  margin-bottom:0; 
+  z-index:2;
+  color: white;
+}
+/* @media (max-width: 767px) {
+  .blog-card-h1 {
+    color: black;
+  }
+} */
 .blog-container-outer{
   background-color:rgb(245, 245, 245); 
   margin-left:-4vh; 
@@ -1070,6 +1120,14 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner:after {
   color:red;
   margin: 10px;
 }
+@media (max-width: 767px) {
+  .all-posts-button {
+  font-size:x-small; 
+  padding:0;
+    padding-right:10px;
+    padding-left:10px;
+  }
+}
 .post-feed {
   position: relative;
   display: grid;
@@ -1093,7 +1151,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner:after {
   }
 }
 .member-card {
-  width: 150px;
+  width: 200px;
 }
 @media (max-width: 991px) {
   .member-card {
