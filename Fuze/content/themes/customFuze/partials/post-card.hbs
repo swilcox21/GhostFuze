@@ -1,0 +1,65 @@
+{{!-- This is a partial file used to generate a post "card"
+which templates loop over to generate a list of posts. --}}
+
+<article class="post-card {{post_class}}{{#match @custom.feed_layout "Grid"}}{{#is "home"}}{{#has index="0"}} post-card-large{{/has}}{{#has index="1,2"}} dynamic{{/has}}{{/is}}{{/match}}{{#match @custom.feed_layout "Grid"}} keep-ratio{{/match}}{{#match @custom.feed_layout "Grid"}}{{#is "home, paged"}} post-card-large{{/is}}{{/match}}{{#unless access}} post-access-{{visibility}}{{/unless}}">
+
+    <div class="blog-card" >
+        {{#if feature_image}}
+        <a  href="{{url}}">
+            <img 
+                class="blog-card-image"
+                src="{{feature_image}}"
+                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                loading="lazy"
+            />
+        </a>
+        {{/if}}
+        <div class="post-card-content blog-card-content">
+            <a class="post-card-content-link" href="{{url}}">
+                <header class="post-card-header">
+                    <h4 class=" blog-card-title">
+                        {{title}}
+                    </h4>
+                    <div class="post-card-tags">
+                        {{#primary_tag}}
+                            <span class="post-card-primary-tag">{{name}}</span>
+                        {{/primary_tag}}
+                        {{#if featured}}
+                            <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
+                        {{/if}}
+                    </div>
+                </header>
+            </a>
+            {{!-- moved a tag up into parent div above for better control over d-flex  --}}
+        <a href="{{url}}">
+            <img 
+                src="https://thumbs.dreamstime.com/b/right-arrow-vector-icon-black-symbol-navigation-163301987.jpg" 
+                class="blog-card-arrow"    
+            />
+        </a href="{{url}}">
+        </div>
+    </div>
+    <div class="blog-card-small" style="">
+        <div class="blog-card-small-inner">
+            <a href="{{url}}">
+                <img 
+                    style="border-radius:10px 10px 0px 0px;"
+                    class="blog-card-image-small"
+                    src="{{feature_image}}"
+                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                    loading="lazy"
+                />
+                <h4 style="max-width:290px; margin:5px; text-align:left;">
+                    {{title}}
+                </h4>
+                {{#primary_tag}}
+                    <img 
+                        src="https://thumbs.dreamstime.com/b/right-arrow-vector-icon-black-symbol-navigation-163301987.jpg" 
+                        style="width:30px; position:absolute; margin-left:250px;"    
+                    />
+                    <div style="color:rgb(242, 0, 0); font-size:1.2rem; font-weight:700; letter-spacing:.5px; text-align:left; margin-left:10px; margin-bottom:10px">{{name}}</div>
+                {{/primary_tag}}
+            </a>
+        </div>
+    </div>
+</article>
