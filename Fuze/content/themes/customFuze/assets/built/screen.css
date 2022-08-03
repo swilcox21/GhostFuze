@@ -1371,7 +1371,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner:after {
 }
 .featured-project-card-tags {
   display: flex;
-  align-items: center;
+  align-items:flex-start;
   gap: 12px;
   margin: 10px 0 10px;
   color: rgb(238, 0, 0);
@@ -1397,7 +1397,18 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner:after {
 }
 .project-card-tags {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 10px 0 10px;
+  color: rgb(222, 0, 0);
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: .5px;
+  line-height: 1.2rem;
+}
+.project-card-tags-small {
+  display: flex;
+  align-items: flex-start;
   gap: 12px;
   margin: 10px 0 10px;
   color: rgb(222, 0, 0);
@@ -1415,10 +1426,12 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner:after {
 }
 @media (max-width: 767px) {
   .project-card-tags  {
-    font-size: .8rem;
+    /* font-size: .8rem;
     line-height: .9rem;
     letter-spacing:0; 
     margin:0;
+    min-width:fit-content; */
+    display: none;
 }
 }
 .post-card-tags {

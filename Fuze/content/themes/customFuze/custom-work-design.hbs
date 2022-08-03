@@ -1,0 +1,51 @@
+{{!< default}}
+
+{{!-- The tag above means: insert everything in this file
+into the {body} tag of the default.hbs template --}}
+
+<img src="https://raw.githubusercontent.com/swilcox21/GhostFuze/master/Fuze/content/images/2022/07/work.png" />
+<div class="projects-container">
+    {{!-- <div style="text-align:center; font-weight:bold; font-size:15px; letter-spacing:3px; color:red; padding:5px;">OUR WORK</div> --}}
+    <h2 style="text-align:center; margin-bottom:20px; ">Projects</h2>
+    {{#get "posts" include="tags" filter="tag:_project + tag:design"}}
+        {{!-- {{#get "tags" filter="slug:prototype , slug:pie , slug:data-viz ,  slug:research ,  slug:design "}}
+            {{#foreach tags}}
+                <div>{{slug}}</div>
+            {{/foreach}}
+        {{/get}} --}}
+        <div style="display:flex; justify-content:center">
+            <a href="/work/">
+                <button class="all-posts-button">ALL PROJECTS</button>
+            </a>
+            <a href="/work-prototype/">
+                <button class="all-posts-button">PROTOTYPE</button>
+            </a>
+            <a href="/work-pie/">
+                <button class="all-posts-button">PIE</button>
+            </a>
+            <a href="/work-dataviz/">
+                <button class="all-posts-button">DATA VIZ</button>
+            </a>
+            <a href="/work-research/">
+                <button class="all-posts-button">RESEARCH</button>
+            </a>
+            <a href="/work-design/">
+                <button style="background-color:red; color:white;" class="all-posts-button">DESIGN</button>
+            </a>
+        </div>
+        <div style="margin-top:-20px;" class="featured-project-feed inner posts">
+            {{#foreach posts}}
+                {{#if featured}}
+                    {{> "project-card"}}
+                {{/if}}
+            {{/foreach}}
+        </div>
+        <div class="project-feed inner posts">
+            {{#foreach posts}}
+                {{^if featured}}
+                    {{> "project-card"}}
+                {{/if}}
+            {{/foreach}}
+        </div>
+    {{/get}}
+</div>

@@ -5,16 +5,36 @@ into the {body} tag of the default.hbs template --}}
 
 <img src="https://raw.githubusercontent.com/swilcox21/GhostFuze/master/Fuze/content/images/2022/07/work.png" />
 <div class="projects-container">
-    <div style="text-align:center; font-weight:bold; font-size:15px; letter-spacing:3px; color:red; padding:5px;">OUR WORK</div>
-    <h1 style="text-align:center;">Projects</h1>
+    {{!-- <div style="text-align:center; font-weight:bold; font-size:15px; letter-spacing:3px; color:red; padding:5px;">OUR WORK</div> --}}
+    <h2 style="text-align:center; margin-bottom:20px; ">Projects</h2>
     {{#get "posts" include="tags" filter="tag:_project"}}
-        {{!-- {{#get "tags" filter="slug:prototype , slug:pie , slug:data-viz ,  slug:research ,  slug:design "}}
-            {{#foreach tags}}
-                <div>{{slug}}</div>
-            {{/foreach}}
-        {{/get}} --}}
-        <img src="https://raw.githubusercontent.com/swilcox21/GhostFuze/master/Fuze/content/images/2022/07/tagbuttons.png" alt="" />
-        <div class="featured-project-feed inner posts">
+
+        {{!-- TAG BUTTONS --}}
+
+        <div style="display:flex; justify-content:center">
+            <a href="/work/">
+                <button style="background-color:red; color:white;" class="all-posts-button">ALL PROJECTS</button>
+            </a>
+            <a href="/work-prototype/">
+                <button class="all-posts-button">PROTOTYPE</button>
+            </a>
+            <a href="/work-pie/">
+                <button class="all-posts-button">PIE</button>
+            </a>
+            <a href="/work-dataviz/">
+                <button class="all-posts-button">DATA VIZ</button>
+            </a>
+            <a href="/work-research/">
+                <button class="all-posts-button">RESEARCH</button>
+            </a>
+            <a href="/work-design/">
+                <button class="all-posts-button">DESIGN</button>
+            </a>
+        </div>
+
+        {{!-- PROJECTS FEED --}}
+
+        <div style="margin-top:-20px;" class="featured-project-feed inner posts">
             {{#foreach posts}}
                 {{#if featured}}
                     {{> "project-card"}}
