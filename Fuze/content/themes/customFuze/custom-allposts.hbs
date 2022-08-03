@@ -3,7 +3,7 @@
 <img src="https://raw.githubusercontent.com/swilcox21/GhostFuze/master/Fuze/content/images/2022/07/blog.png" />
 {{#get "posts" include="tags" filter="tag:-'_project'+tag:-'_team-member'"}}
 <div class="" style="background-color:whitesmoke; padding-left:15%; padding-right:15%;">
-            <input type="search" style=" min-width:300px; padding-left:20px; padding-right:20px; padding-top:12px; padding-bottom:12px;  border-radius:50px; border: 1px solid gray; " placeholder="Search blog posts"/>
+            <button type="search" data-ghost-search style=" min-width:300px; padding-left:20px; text-align:start; color:gray; background-color:white; padding-right:20px; padding-top:12px; padding-bottom:12px;  border-radius:50px; border: 1px solid gray;">Search blog posts &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ?</button>
     {{#foreach posts}}
         {{#has index="0"}}
             <a href="{{url}}">
