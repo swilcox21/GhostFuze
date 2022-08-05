@@ -679,7 +679,7 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
   background-color: #fff;
 }
 .has-cover:not(.home-template) .gh-head {
-  background-color: var(--ghost-accent-color);
+  background-color: white;
   color: #fff;
 }
 .home-template.has-cover .gh-head {
@@ -823,7 +823,7 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
   letter-spacing: -0.005em;
   font-size: 1.5rem;
   border-radius: 6px;
-  color: #fff;
+  color: black;
   background: var(--ghost-accent-color);
 }
 .has-cover .gh-head-button {
@@ -2006,12 +2006,12 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner:after {
   .gh-content > ol,
   .gh-content > p,
   .gh-content > ul {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .gh-content .kg-product-card .kg-product-card-description > ol,
   .gh-content .kg-product-card .kg-product-card-description > p,
   .gh-content .kg-product-card .kg-product-card-description > ul {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .gh-content blockquote:not([class]):before {
     left: min(-4vmin, -20px);
@@ -2235,7 +2235,7 @@ iframe.instagram-media + script + :not([id]) {
 .footer-cta-button span {
   display: inline-block;
   padding: 9px 15px;
-  color: #fff;
+  color: black;
   font-size: 1.6rem;
   font-weight: 600;
   letter-spacing: -0.005em;
