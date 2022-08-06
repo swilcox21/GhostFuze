@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/swilcox21/GhostFuze/master/Fuze/content/images/2022/07/blog.png" />
 {{#get "posts" include="tags" filter="tag:-'_project'+tag:-'_team-member'"}}
-<div class="custom-allposts-large" style="background-color:whitesmoke; padding-left:15%; padding-right:15%;">
+<div class="custom-allposts-large" style="background-color:#f7f3f2; padding-left:15%; padding-right:15%;">
     <img data-ghost-search style="cursor:pointer; position:absolute; margin-left:250px; margin-top:11px; max-width:35px;" src="https://github.com/swilcox21/GhostFuze/blob/master/Fuze/content/images/2022/07/searchicon.png?raw=true" alt="" />
     <button type="search" data-ghost-search style=" min-width:300px; padding-left:20px; text-align:start; color:gray; background-color:white; padding-right:20px; padding-top:12px; padding-bottom:12px;  border-radius:50px; border: 1px solid gray;">Search blog posts</button>
     {{#foreach posts}}
@@ -16,14 +16,14 @@
                         loading="lazy"
                     />
                     <div style="background-color:white; border-radius:0px 10px 10px 0px; padding:20px; width:450px; display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-end">
-                        <div style="margin:5px;">
+                        <div style="margin:5px; font-size:1.5rem">
                             {{date published_at format="MMMM DD, YYYY"}}
                         </div>
-                        <h2 style=" margin:5px; text-align:left; color:rgb(242, 0, 0); ">
+                        <h2 style=" margin:5px; text-align:left; color:#E30F17; ">
                             {{title}}
                         </h2>
                         {{#primary_tag}}
-                            <div style=" font-size:1.2rem; font-weight:700; letter-spacing:.5px; text-align:left; margin:5px;">{{name}}</div>
+                            <div style=" font-size:1.6rem; color:black; text-align:left; margin:5px;">{{name}}</div>
                         {{/primary_tag}}
                     </div>
                 </div>
@@ -42,14 +42,14 @@
                         loading="lazy"
                     />
                     <div style="margin:20px;">
-                        <div style="margin:5px;">
+                        <div style="margin:5px; font-size:1.5rem">
                                 {{date published_at format="MMMM DD, YYYY"}}
                             </div>
-                        <h4 style="max-width:290px; margin:5px; text-align:left; color:rgb(242, 0, 0);">
+                        <h4 style="max-width:290px; margin:5px; text-align:left; color:#E30F17;">
                             {{title}}
                         </h4>
                         {{#primary_tag}}
-                            <div style=" font-size:1.6rem; letter-spacing:.5px; text-align:left; margin:5px;">{{name}}</div>
+                            <div style=" font-size:1.6rem; text-align:left; margin:5px;">{{name}}</div>
                         {{/primary_tag}}
                     </div>
                 </div>
@@ -60,7 +60,7 @@
 </div>
 {{/get}}
 {{#get "posts" include="tags" filter="tag:-'_project'+tag:-'_team-member'"}}
-<div class="custom-allposts-medium" style="background-color:whitesmoke; padding-left:15%; padding-right:15%;">
+<div class="custom-allposts-medium" style="background-color:#f7f3f2; padding-left:15%; padding-right:15%;">
     <img data-ghost-search style="cursor:pointer; position:absolute; margin-left:250px; margin-top:11px; max-width:35px;" src="https://github.com/swilcox21/GhostFuze/blob/master/Fuze/content/images/2022/07/searchicon.png?raw=true" alt="" />
     <button type="search" data-ghost-search style=" min-width:300px; padding-left:20px; text-align:start; color:gray; background-color:white; padding-right:20px; padding-top:12px; padding-bottom:12px;  border-radius:50px; border: 1px solid gray;">Search blog posts</button>
     {{#foreach posts}}
@@ -77,11 +77,11 @@
                         <div style="margin-left:5px;">
                             {{date published_at format="MMMM DD, YYYY"}}
                         </div>
-                        <h3 style="margin:0; margin-left:5px; text-align:left; color:rgb(242, 0, 0); ">
+                        <h3 style="margin:0; margin-left:5px; text-align:left; color:#E30F17; ">
                             {{title}}
                         </h3>
                         {{#primary_tag}}
-                            <div style="margin-left:5px; font-size:1.2rem; font-weight:700; letter-spacing:.5px; text-align:left;">{{name}}</div>
+                            <div style="margin-left:5px; font-size:1.5rem; letter-spacing:.5px; text-align:left;">{{name}}</div>
                         {{/primary_tag}}
                     </div>
                 </div>
@@ -103,7 +103,7 @@
                         <div style="margin:5px; font-size:1.2rem; ">
                                 {{date published_at format="MMMM DD, YYYY"}}
                             </div>
-                        <h5 style="margin:5px; font-size:1.5rem; text-align:left; color:rgb(242, 0, 0);">
+                        <h5 style="margin:5px; font-size:1.5rem; text-align:left; color:#E30F17;">
                             {{title}}
                         </h5>
                         {{#primary_tag}}
@@ -118,7 +118,7 @@
 </div>
 {{/get}}
 {{#get "posts" include="tags" filter="tag:-'_project'+tag:-'_team-member'"}}
-<div class="custom-allposts-small" style="background-color:whitesmoke; padding-left:5%; padding-right:5%;">
+<div class="custom-allposts-small" style="background-color:#f7f3f2; padding-left:5%; padding-right:5%;">
     <img data-ghost-search style="cursor:pointer; position:absolute; margin-left:250px; margin-top:11px; max-width:35px;" src="https://github.com/swilcox21/GhostFuze/blob/master/Fuze/content/images/2022/07/searchicon.png?raw=true" alt="" />
     <button type="search" data-ghost-search style="margin-left:20px; width:300px; padding-left:20px; text-align:start; color:gray; background-color:white; padding-right:20px; padding-top:12px; padding-bottom:12px;  border-radius:50px; border: 1px solid gray;">Search blog posts</button>
     {{#foreach posts}}
@@ -135,7 +135,7 @@
                         <div style="margin-left:2px; font-size:1rem;">
                             {{date published_at format="MMMM DD, YYYY"}}
                         </div>
-                        <h5 style="font-size:1.5rem; margin:0; margin-left:2px; text-align:left; color:rgb(242, 0, 0); ">
+                        <h5 style="font-size:1.5rem; margin:0; margin-left:2px; text-align:left; color:#E30F17; ">
                             {{title}}
                         </h5>
                         {{#primary_tag}}
@@ -161,7 +161,7 @@
                         <div style=" font-size:1rem; ">
                                 {{date published_at format="MMMM DD, YYYY"}}
                             </div>
-                        <h5 style="margin:0;font-size:1.2rem; text-align:left; color:rgb(242, 0, 0);">
+                        <h5 style="margin:0;font-size:1.2rem; text-align:left; color:#E30F17;">
                             {{title}}
                         </h5>
                         {{#primary_tag}}

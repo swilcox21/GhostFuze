@@ -11,8 +11,8 @@ into the {body} tag of the default.hbs template --}}
             <div style="margin-bottom:40px; color:gray;">{{name}}</div>
             {{/primary_tag}}
             <div style="border-bottom: 1px solid rgb(177, 177, 177); width:100%; margin-bottom:40px;"></div>
-            <div style="margin-bottom:15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nemo mollitia minima libero expedita consequuntur molestiae ea quis autem illum, laborum accusantium quibusdam sint omnis velit iste asperiores impedit unde tenetur dicta debitis modi maxime dolores porro? Quo accusantium delectus molestiae odio modi vel, recusandae perferendis libero quaerat laborum dolorem obcaecati inventore corporis voluptates tenetur, quas iure repellat id. Ducimus cum molestiae repellat, mollitia temporibus doloribus repudiandae architecto delectus, sunt ullam dolorum enim in omnis saepe! Quidem, reiciendis corrupti, porro maiores accusantium praesentium amet distinctio dolores eligendi natus sed sapiente rem nesciunt error odio obcaecati ratione? Ipsum earum delectus, reprehenderit dicta itaque esse. Debitis aliquid, repellat facilis iure, suscipit eius nam magnam ipsum, exercitationem quidem in error mollitia ducimus pariatur.</div>
-            <div style="margin-bottom:15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nemo mollitia minima libero expedita consequuntur molestiae ea quis autem illum, laborum accusantium quibusdam sint omnis velit iste asperiores impedit unde tenetur dicta debitis modi maxime dolores porro? Quo accusantium delectus molestiae odio modi vel, recusandae perferendis libero quaerat laborum dolorem obcaecati inventore corporis voluptates tenetur, quas iure repellat id. Ducimus cum molestiae repellat, mollitia temporibus doloribus repudiandae architecto delectus, sunt ullam dolorum enim in omnis saepe! Quidem, reiciendis corrupti, porro maiores accusantium praesentium amet distinctio dolores eligendi natus sed sapiente rem nesciunt error odio obcaecati ratione? Ipsum earum delectus, reprehenderit dicta itaque esse. Debitis aliquid, repellat facilis iure, suscipit eius nam magnam ipsum, exercitationem quidem in error mollitia ducimus pariatur.</div>
+            <div style="margin-bottom:15px;">{{content}}</div>
+            {{!-- <div style="margin-bottom:15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nemo mollitia minima libero expedita consequuntur molestiae ea quis autem illum, laborum accusantium quibusdam sint omnis velit iste asperiores impedit unde tenetur dicta debitis modi maxime dolores porro? Quo accusantium delectus molestiae odio modi vel, recusandae perferendis libero quaerat laborum dolorem obcaecati inventore corporis voluptates tenetur, quas iure repellat id. Ducimus cum molestiae repellat, mollitia temporibus doloribus repudiandae architecto delectus, sunt ullam dolorum enim in omnis saepe! Quidem, reiciendis corrupti, porro maiores accusantium praesentium amet distinctio dolores eligendi natus sed sapiente rem nesciunt error odio obcaecati ratione? Ipsum earum delectus, reprehenderit dicta itaque esse. Debitis aliquid, repellat facilis iure, suscipit eius nam magnam ipsum, exercitationem quidem in error mollitia ducimus pariatur.</div>
             <div style="border-bottom: 1px solid rgb(177, 177, 177); width:100%; margin-bottom:50px;"></div>
             {{#primary_author}}
             <div style="display:flex;">
@@ -22,10 +22,10 @@ into the {body} tag of the default.hbs template --}}
                     <div>{{bio}}</div>
                 </div>
             </div>
-            {{/primary_author}}
+            {{/primary_author}} --}}
 
         </div>
-        <div style="width:100%;background-color:whitesmoke; padding-bottom:60px;">
+        <div style="width:100%;background-color:#f7f3f2; padding-bottom:60px;">
             <img 
                 src="{{img_url feature_image}}"
                 style="width:100%; height:50vh;"
@@ -50,7 +50,7 @@ into the {body} tag of the default.hbs template --}}
 
             This query gets the latest 3 posts on the site, but adds a filter to
             exclude the post we're currently on from being included. --}}
-                <div style="background-color:whitesmoke; padding:40px; padding-left:100px; padding-right:100px;">
+                <div style="background-color:#f7f3f2; padding:40px; padding-left:100px; padding-right:100px;">
                     {{#get "posts" include="tags" filter="id:-{{id}} + tag:-'_project' + tag:-'_team-member'" limit="3" as |more_posts| }}
                         {{#if more_posts}}
                             <h4 style="letter-spacing:2px; margin-left:40px; font-weight:800;"><a href="/work/">MORE FROM THE TEAM</a></h4>

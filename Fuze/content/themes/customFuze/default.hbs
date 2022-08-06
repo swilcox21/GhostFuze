@@ -11,6 +11,7 @@
 
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
@@ -27,9 +28,9 @@
                 <a class="gh-head-logo{{#unless @site.logo}} no-image{{/unless}}" href="{{@site.url}}">
                     {{#if @site.logo}}
                         {{#is "home"}}
-                        <img style="width:235px; min-height:45px; margin-right:40px;" src="{{@site.logo}}" alt="{{@site.title}}" />
+                        <img style="width:235px; min-height:45px; margin-right:30px;" src="{{@site.logo}}" alt="{{@site.title}}" />
                         {{else}}
-                        <img style="width:235px; min-height:55px; margin-right:40px;" src="https://github.com/swilcox21/GhostFuze/blob/master/Fuze/content/images/2022/07/red-csl-logo.png?raw=true" alt="{{@site.title}}" />
+                        <img style="width:235px; min-height:55px; margin-right:30px;" src="https://github.com/swilcox21/GhostFuze/blob/master/Fuze/content/images/2022/07/red-csl-logo.png?raw=true" alt="{{@site.title}}" />
                         {{/is}}
                     {{else}}
                         {{@site.title}}

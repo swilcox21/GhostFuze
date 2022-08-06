@@ -2,10 +2,12 @@
 
 {{#post}}
     <div class="project-template-large"  >
-        <div style="width:100%; height:400px; background-color: whitesmoke; position: absolute; z-index:-1;"></div>
+        <div style="width:100%; height:400px; background-color: #f7f3f2; position: absolute; z-index:-1;"></div>
         <div style="display:flex; margin-left:15%; margin-top:50px; ">
             <div>
-                <a style="color:#E30F17; letter-spacing:2px; font-size:2rem; font-weight:700;" href="/work/">WORK</a>
+                <a style="display:flex;" href="/work/">
+                    <div style="color:#E30F17; letter-spacing:2px; font-size:1.5rem; font-weight:700;"><i class="fa fa-arrow-left"></i> &nbsp;WORK</div>
+                </a>
                 <h1 style="margin-top: 60px; margin-bottom:10px; ">{{title}}</h1>
                 <div style="width:80%; font-size:2rem; line-height:2.8rem; letter-spacing:1px;">{{custom_excerpt}}</div>
             </div>
@@ -26,7 +28,7 @@
                 <div style="letter-spacing:3px; font-weight:800;">PROJECT TYPE</div>
                 {{#foreach tags}}
                     {{^has slug="_project"}}
-                        <div>{{name}}</div>
+                        <div style="font-size:1.3rem;">{{name}}</div>
                     {{/has}}    
                 {{/foreach}}
                 <div style="letter-spacing:3px; font-weight:800; margin-top:30px;">TIMELINE</div>
@@ -43,9 +45,11 @@
 
     <div class="project-template-medium">
         <div  style="">
-        <div style="display:flex; width:100%; background-color: whitesmoke;  position:relative; z-index:1;">
+        <div style="display:flex; width:100%; background-color: #f7f3f2;  position:relative; z-index:1;">
             <div style="margin-left:5%; margin-top:30px;  margin-bottom:20px;">
-                <a style="color:#E30F17; letter-spacing:2px; font-size:2rem; font-weight:700;" href="/work/">WORK</a>
+                <a style="display:flex;" href="/work/">
+                    <div style="color:#E30F17; letter-spacing:2px; font-size:1.5rem; font-weight:700;"><i class="fa fa-arrow-left"></i> &nbsp;WORK</div>
+                </a>
                 <h1 style="margin-top: 20px; margin-bottom:10px; letter-spacing:2px;">{{title}}</h1>
                 <div style="width:90%; font-size:1.4rem; line-height:1.8rem; letter-spacing:1px;">{{custom_excerpt}}</div>
             </div>
@@ -65,24 +69,28 @@
                 <h4 style="letter-spacing:1px; width:120%; font-size:1.7rem; ">PROJECT TYPE</h4>
                 {{#foreach tags}}
                     {{^has slug="_project"}}
-                        <div>{{name}}</div>
+                        <div style="font-size:1.3rem;">{{name}}</div>
                     {{/has}}    
                 {{/foreach}}
                 <h4 style="letter-spacing:1px; width:120%; font-size:1.7rem; ">TIMELINE</h4>
-                {{meta_description}}
+                    <div style="font-size:1.3rem;">{{meta_description}}</div>
                 <h4 style="letter-spacing:1px; width:120%; font-size:1.7rem; ">TEAM</h4>
                 {{#foreach authors}}
-                    - {{name}}
+                    <ul>
+                        <li style="font-size:1.3rem;">{{name}}</li>
+                    </ul>
                 {{/foreach}}
             </div>
         </div>
     </div>
 
     <div class="project-template-small">
-        <div style="width:100%; height:110px; background-color: whitesmoke; position: absolute; z-index:-1;"></div>
+        <div style="width:100%; height:110px; background-color: #f7f3f2; position: absolute; z-index:-1;"></div>
         <div style="display:flex; margin-left:5%; margin-right:8%; margin-top:10px;">
             <div style="width:100%">
-                <a style="color:#E30F17; letter-spacing:2px; font-size:1.5rem; font-weight:700;" href="/work/">WORK</a>
+                <a style="display:flex;" href="/work/">
+                    <div style="color:#E30F17; letter-spacing:2px; font-size:1.5rem; font-weight:700;"><i class="fa fa-arrow-left"></i> &nbsp;WORK</div>
+                </a>
                 <h1 style="margin-top: 5px;margin-bottom:5px; ">{{title}}</h1>
             </div>
             <div style="margin-top:5px;">
@@ -112,7 +120,9 @@
             <div style="width:30%">
                 <h4 style="font-size:1.4rem;">TEAM</h4>
                 {{#foreach authors}}
-                    <div style="font-size:1.2rem; line-height:1.4rem;"> - {{name}}</div>
+                    <ul>
+                        <li style="font-size:1.3rem;">{{name}}</li>
+                    </ul>
                 {{/foreach}}
             </div>
         </div>
@@ -125,7 +135,7 @@
 
     This query gets the latest 3 posts on the site, but adds a filter to
     exclude the post we're currently on from being included. --}}
-        <div style="background-color:whitesmoke; padding:10px; padding-left:100px; padding-right:100px; margin-top:50px;">
+        <div style="background-color:#f7f3f2; padding:10px; padding-left:100px; padding-right:100px; margin-top:50px;">
             {{#get "posts" include="tags" filter="id:-{{id}} + tag:_project" limit="3" order="desc" as |more_posts| }}
                 {{#if more_posts}}
                 <a href="/work/">
