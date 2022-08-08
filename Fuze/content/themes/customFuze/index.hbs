@@ -39,7 +39,9 @@ into the {body} of the default.hbs template --}}
     {{!-- PROJECTS --}}
 
     <div class="projects-container">
-        <div style="text-align:center; font-weight:bold; font-size:15px; letter-spacing:3px; color:#E30F17; padding:5px;">OUR WORK</div>
+        <div style="text-align:center;">
+            <a href="/work/" style="text-align:center; font-weight:bold; font-size:15px; letter-spacing:3px; color:#E30F17; padding:5px;">OUR WORK</a>
+        </div>
         <h1 style="text-align:center;">Projects</h1>
         <div class="featured-project-feed inner posts">
             {{#get "posts" include="tags" filter="featured:true+tag:'_project'" order="published_at asc" limit=2}}
@@ -67,7 +69,7 @@ into the {body} of the default.hbs template --}}
                 <div class="blog-header">
                     <h1 class="blog-card-h1">From the blog</h1>
                     <div>
-                        <a style="margin:auto;" href="/all-posts/">
+                        <a style="margin:auto;" href="/blog/">
                             <button class="all-posts-button-home">ALL POSTS</button>
                         </a>
                     </div>

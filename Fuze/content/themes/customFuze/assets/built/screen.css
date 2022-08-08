@@ -1083,6 +1083,38 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner:after {
   margin-top:-20px;
   }
 }
+.custom-post-large-image {
+  display:contents;
+}
+.custom-post-small-image {
+  display: none;
+}
+@media (max-width: 991px) {
+.custom-post-large-image {
+  display:none;
+}
+}
+@media (max-width: 991px) {
+.custom-post-small-image {
+  display: contents;
+}
+}
+.custom-post-large {
+  display:contents;
+}
+.custom-post-small {
+  display: none;
+}
+@media (max-width: 991px) {
+.custom-post-large {
+  display:none;
+}
+}
+@media (max-width: 991px) {
+.custom-post-small {
+  display: contents;
+}
+}
 .red-bubble {
   height:30%; 
   width:52%; 
