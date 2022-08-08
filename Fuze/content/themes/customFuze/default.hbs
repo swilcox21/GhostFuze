@@ -28,9 +28,9 @@
                 <a class="gh-head-logo{{#unless @site.logo}} no-image{{/unless}}" href="{{@site.url}}">
                     {{#if @site.logo}}
                         {{#is "home"}}
-                        <img style="width:235px; min-height:45px; margin-right:30px;" src="{{@site.logo}}" alt="{{@site.title}}" />
+                        <img class="logo-home" style=" margin-right:30px;" src="{{@site.logo}}" alt="{{@site.title}}" />
                         {{else}}
-                        <img style="width:235px; min-height:55px; margin-right:30px;" src="https://github.com/swilcox21/GhostFuze/blob/master/Fuze/content/images/2022/07/red-csl-logo.png?raw=true" alt="{{@site.title}}" />
+                        <img class="logo" style=" margin-right:30px;" src="https://github.com/swilcox21/GhostFuze/blob/master/Fuze/content/images/2022/07/red-csl-logo.png?raw=true" alt="{{@site.title}}" />
                         {{/is}}
                     {{else}}
                         {{@site.title}}
@@ -51,15 +51,15 @@
                 {{navigation}}
             </div>
             {{/is}}
-            <div class="gh-head-actions">
-                {{!-- <div class="gh-social">
+            {{!-- <div class="gh-head-actions">
+                <div class="gh-social">
                     {{#if @site.facebook}}
                         <a class="gh-social-link gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
                     {{/if}}
                     {{#if @site.twitter}}
                         <a class="gh-social-link gh-social-twitter" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
                     {{/if}}
-                </div> --}}
+                </div>
                 {{#if @site.members_enabled}}
                     {{#unless @member}}
                         <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
@@ -67,7 +67,7 @@
                         <a class="gh-head-button" href="#/portal/account" data-portal="account">Account</a>
                     {{/unless}}
                 {{/if}}
-            </div>
+            </div> --}}
         </nav>
     </header>
 

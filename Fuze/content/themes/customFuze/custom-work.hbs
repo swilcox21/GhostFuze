@@ -4,7 +4,7 @@
 into the {body} tag of the default.hbs template --}}
 
 <img src="https://raw.githubusercontent.com/swilcox21/GhostFuze/master/Fuze/content/images/2022/07/work.png" />
-<div class="projects-container">
+<div class="work-container">
     {{!-- <div style="text-align:center; font-weight:bold; font-size:15px; letter-spacing:3px; color:#E30F17; padding:5px;">OUR WORK</div> --}}
     <h2 style="text-align:center; margin-bottom:20px; ">Projects</h2>
     {{#get "posts" include="tags" filter="tag:_project"}}
@@ -42,11 +42,11 @@ into the {body} tag of the default.hbs template --}}
             {{/foreach}}
         </div>
         <div class="project-feed inner posts">
-            {{#foreach posts}}
-                {{^if featured}}
+            {{#get "posts" include="tags" filter="featured:false+tag:'_project'" order="published_at asc"}}
+                {{#foreach posts}}
                     {{> "project-card"}}
-                {{/if}}
-            {{/foreach}}
+                {{/foreach}}
+            {{/get}}
         </div>
     {{/get}}
 </div>
