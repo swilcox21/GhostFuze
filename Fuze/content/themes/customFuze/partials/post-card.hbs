@@ -7,7 +7,7 @@ which templates loop over to generate a list of posts. --}}
         {{#if feature_image}}
         <a  href="{{url}}">
             <div class="blog-card-image-box">
-                <img 
+                <img
                     src="{{feature_image}}"
                     alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
                     loading="lazy"
@@ -25,6 +25,9 @@ which templates loop over to generate a list of posts. --}}
                         {{#primary_tag}}
                             <span class="post-card-primary-tag">{{name}}</span>
                         {{/primary_tag}}
+                        {{!-- {{#primary_author}}
+                            <span class="post-card-primary-tag">{{name}}</span>
+                        {{/primary_author}} --}}
                         {{#if featured}}
                             <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
                         {{/if}}
