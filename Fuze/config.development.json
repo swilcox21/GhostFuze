@@ -11,7 +11,15 @@
     }
   },
   "mail": {
-    "transport": "Direct"
+      "transport": "SMTP",
+      "options": {
+        "host": "nauskopsmtp.cslg1.cslg.net",
+        "port": 25,
+        "secureConnection": false,
+        "tls": {
+          "rejectUnauthorized": false
+        }
+      }
   },
   "logging": {
     "transports": [
